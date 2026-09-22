@@ -1,0 +1,126 @@
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    position: absolute;
+    right: 0;
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+p{
+    text-align: center;
+}
+.water-text {
+    position: fixed;
+    width: 65%;
+    left: 17.5%;
+    top: 10%;
+    animation: water 20s linear infinite;
+}
+
+@keyframes water {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(40px, 20px) rotate(0.3deg);
+    }
+
+    20% {
+        transform: translate(75px, 55px) rotate(0.6deg);
+    }
+
+    30% {
+        transform: translate(90px, 100px) rotate(0.4deg);
+    }
+
+    40% {
+        transform: translate(60px, 145px) rotate(-0.2deg);
+    }
+
+    50% {
+        transform: translate(0px, 175px) rotate(-0.6deg);
+    }
+
+    60% {
+        transform: translate(-60px, 150px) rotate(-0.4deg);
+    }
+
+    70% {
+        transform: translate(-85px, 95px) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(-65px, 45px) rotate(0.4deg);
+    }
+
+    90% {
+        transform: translate(-25px, 15px) rotate(0.3deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    background: #3b82f6;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+.blue {
+    background: #4d8cff;
+}
+
+.green {
+    background: #4fa89a;
+}
+
+.pink {
+    background: #d987a5;
+}
+
+body {
+    --page-color: #0066cc;
+    background: var(--page-color);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.30),
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(0, 0, 0, 0.45),
+            transparent 70%
+        );
+}

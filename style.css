@@ -124,3 +124,33 @@ body::after {
             transparent 70%
         );
 }
+
+/* 1. COMPLETELY REMOVE the filter from everything on your page */
+* {
+    filter: none !important;
+}
+
+/* 2. ISOLATE IT ONLY to the moving image file */
+.moving-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    animation: moveRight 10s linear infinite;
+    pointer-events: none !important;
+    
+    /* The browser will now isolate this effect strictly to the transparent PNG pixels */
+    filter: sepia(1) saturate(10000%) hue-rotate(0deg) !important; 
+}
+
+/* 3. FIX THE POSITION SHIFTING without touching layout properties */
+.animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* Puts it immediately behind your buttons and text */
+    pointer-events: none !important;
+}
